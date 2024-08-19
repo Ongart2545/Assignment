@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Scatter Plot</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Calculate and plot displacement</h1>
+    <div class="container">
+        <div>
+            <form id="inputForm">
+                <label for="u">Initial velocity (u):</label>
+                <input type="number" id="u" name="u" step="any" required> m/s<br><br>
+                <label for="a">Acceleration (a) :</label>
+                <input type="number" id="a" name="a" step="any" required> m/s<span>&#178;</span><br><br>
+                <label for="t">Total time (t)  :</label>
+                <input type="number" id="t" name="t" step="any" required> s<br><br>
+                <label for ="sample">Number of samples: </label>
+                <select id ="sample" name="samplenum">
+                    <option value="10"> 10 </option>
+                    <option value="20"> 20 </option>
+                    <option value="30"> 30 </option>
+                    <option value="40"> 40 </option>
+                    <option value="50"> 50 </option>
+                    <option value="60"> 60 </option>
+                    <option value="70"> 70 </option>
+                    <option value="80"> 80 </option>
+                    <option value="90"> 90 </option>
+                    <option value="100"> 100 </option>
+                </select><br><br>
+                <input type="submit" value="Calculate" id="button">
+                
+            </form>
+        </div>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
